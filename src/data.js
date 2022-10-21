@@ -13,10 +13,16 @@ import QuoteImg from "../src/img/testimonial/quote.svg";
 import { GrFacebookOption } from "react-icons/gr";
 import { IoMdArrowForward } from "react-icons/io";
 import { FiSend } from "react-icons/fi";
-import { FaPlay, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import {
+  FaPlay,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaInstagram,
+} from "react-icons/fa";
 import {
   IoLogoInstagram,
-  IoLogoPinterest,
+  IoLogoLinkedin,
   IoLogoTwitter,
   IoLogoYoutube,
 } from "react-icons/io";
@@ -28,20 +34,33 @@ export const headerData = {
 export const navData = {
   items: [
     { href: "/", name: "Home" },
-    { href: "/", name: "About" },
-    { href: "/", name: "Gallery" },
-    { href: "/", name: "Interview" },
-    { href: "/", name: "Articles" },
-    { href: "/", name: "Contact" },
+    { href: "/", name: "Nosotros" },
+    { href: "/", name: "Productos" },
+    { href: "/", name: "Entrevista" },
+    { href: "/", name: "Comunidad" },
+    { href: "/", name: "Contacto" },
   ],
 };
 
 export const socialData = [
-  { href: "/", icon: <GrFacebookOption /> },
-  { href: "/", icon: <IoLogoInstagram /> },
-  { href: "/", icon: <IoLogoPinterest /> },
-  { href: "/", icon: <IoLogoTwitter /> },
-  { href: "/", icon: <IoLogoYoutube /> },
+  {
+    href: "https://www.instagram.com/treeeco.siar/",
+    icon: <IoLogoInstagram />,
+  },
+  {
+    href: "https://www.facebook.com/treeecoargentina/",
+    icon: <GrFacebookOption />,
+  },
+  {
+    href: "https://www.linkedin.com/company/treeeco/",
+    icon: <IoLogoLinkedin />,
+  },
+  { href: "https://twitter.com/TreeecoA", icon: <IoLogoTwitter /> },
+
+  {
+    href: "https://www.youtube.com/channel/UC2BpxJym40BkKdh5J33bAeQ",
+    icon: <IoLogoYoutube />,
+  },
 ];
 
 export const heroData = {
@@ -147,87 +166,86 @@ export const testimonialData = [
 ];
 
 export const contactData = {
-  title: "Get in touch with me:",
+  title: "Contacto",
   info: [
     {
-      title: "LA office",
-      subtitle:
-        "In velit arcu posuere integer sit amet, consectetur nun adipiscing elit. Duis porttitor massa tellus",
+      title: "Central Factory",
+      subtitle: "Fábrica de procesos y preparado de productos ambientales",
       address: {
         icon: <FaMapMarkerAlt />,
-        name: "784 Norman Street, Los Angeles",
+        name: "Pje. Sansouci 2500, Tandil",
       },
       phone: {
         icon: <FaPhoneAlt />,
-        number: "+49 93 30493943",
+        number: "+54 249 466 0711",
       },
       email: {
         icon: <FaEnvelope />,
-        address: "contact@yourcompany.com",
+        address: "treeecoargentina@gmail.com",
       },
       link: "Get location",
     },
     {
-      title: "NYC office",
+      title: "Distribución y Stock",
       subtitle:
-        "Sit amet, consectetur nun in velit arcu posuere integer. Adipiscing elit duis porttitor massa tellus",
+        "De L a V de 9 a 13Hs / 16 a 20 hs y Sábados de 9 a 12 hs, nos encontras en circuito centro",
       address: {
         icon: <FaMapMarkerAlt />,
-        name: "1630 Elm Drive, New York City",
+        name: "Perimetro Av. Balbín/Av. Buzón - Av. Avellaneda - Av. Rivadavia/Av. Perón - Av. del Valle, Tandil ",
       },
       phone: {
         icon: <FaPhoneAlt />,
-        number: "+49 34 36573355",
+        number: "+54 249 420 8028",
       },
       email: {
-        icon: <FaEnvelope />,
-        address: "contact@yourcompany.com",
+        icon: <FaInstagram />,
+        address: "@treeeco.siar",
       },
       link: "Get location",
     },
   ],
   form: {
-    name: "Write your name here",
-    email: "Write your email address",
-    message: "Write your messages here",
-    btnText: "Send it",
+    name: "Nombre",
+    email: "e-mail (ó @insta, #face, discord, etc.)",
+    message: "Escriba su mensaje",
+    btnText: "Enviar",
   },
 };
 
 export const footerData = {
   about: {
-    title: "About TREEECO TANDIL ARGENTINA",
+    title: "About TREEECO -  Tandil, ARGENTINA",
     subtitle:
-      "Sit amet, consectetur nun in velit arcu posuere integer. Adipiscing elit duis porttitor massa tellus",
+      "Empresa ambiental con impacto social. Asesoramiento y producción de abono orgánico",
     address: {
       icon: <FaMapMarkerAlt />,
-      name: "1630 Elm Drive, New York City",
+      name: "Pje. Sansouci 2500, Tandil",
     },
     phone: {
       icon: <FaPhoneAlt />,
-      number: "+49 34 36573355",
+      number: "+54 249 466 0711 / +54 249 420 8028 ",
     },
     email: {
       icon: <FaEnvelope />,
-      address: "contact@yourcompany.com",
+      address: "treeecoargentina@gmail.com",
     },
   },
   links: {
-    title: "Useful links",
+    title: "Links útiles",
     items: [
-      { href: "/", name: "About me" },
-      { href: "/", name: "My gallery" },
-      { href: "/", name: "My services" },
-      { href: "/", name: "Contact me" },
+      { href: "/", name: "Nosotros" },
+      { href: "/", name: "Los productos" },
+      { href: "/", name: "Servicios" },
+      { href: "/", name: "Contacto" },
     ],
   },
   program: {
-    title: "Working Time",
+    title: "Horarios",
     items: [
-      { name: "Mon - Tue / Appointment" },
-      { name: "Wed - Fri / 10:00 - 9:00pm" },
-      { name: "Sat / 10:00 - 6:00pm" },
-      { name: "Sun / no work on this day" },
+      { name: "L a V mañanas / 9:00 - 13:00pm" },
+      { name: "L a V tardes / 16:00 a 20:00pm" },
+      { name: "Sábado / 9:00 - 12:00" },
+      { name: "Domingos / no trabajamos" },
     ],
   },
   newsletter: {
