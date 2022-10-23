@@ -40,6 +40,7 @@ export const navData = {
     { href: "#skills", name: "Comunidad" },
     { href: "#contact", name: "Contacto" },
   ],
+  btnIcon: <IoMdArrowForward />,
 };
 
 export const socialData = [
@@ -263,5 +264,6 @@ export const footerData = {
       { href: "/", name: "Login" },
       { href: "/", name: "Registro" },
     ],
+    btnIcon: <FaPlay />,
   },
 };
