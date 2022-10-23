@@ -59,6 +59,7 @@ const Skills = () => {
 
   return (
     <motion.section
+      id="skills"
       ref={ref}
       className="section font-primary"
       variants={fadeIn("up")}

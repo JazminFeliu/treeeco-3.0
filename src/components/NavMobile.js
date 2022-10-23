@@ -7,6 +7,7 @@ const NavMobile = () => {
   const { items } = navData;
   return (
     <nav
+      id="navMobile"
       className="w-full h-full flex flex-col
       justify-evenly overflow-hidden "
     >

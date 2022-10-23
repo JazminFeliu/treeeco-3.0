@@ -6,7 +6,7 @@ import { fadeIn } from "../variants";
 const About = () => {
   const { title, subtitle1, subtitle2, btnText, btnIcon } = aboutData;
   return (
-    <section className="lg:py-16 xl:pb-[16px]">
+    <section id="about" className="lg:py-16 xl:pb-[16px]">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-[70px] items-center">
           <motion.div

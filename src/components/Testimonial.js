@@ -10,6 +10,7 @@ import { fadeIn } from "../variants";
 const Testimonial = () => {
   return (
     <motion.section
+      id="testimonial"
       variants={fadeIn("up")}
       initial="hidden"
       whileInView={"show"}

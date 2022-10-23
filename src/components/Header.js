@@ -18,6 +18,7 @@ const Header = () => {
   });
   return (
     <header
+      id="header"
       className={`${
         isActive
           ? "h-[100px] lg:h-[110px] shadow-lg"

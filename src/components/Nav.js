@@ -5,7 +5,7 @@ const Nav = () => {
   const { items } = navData;
 
   return (
-    <nav>
+    <nav id="nav">
       <ul className="flex gap-x-[58px]">
         {items.map((item, index) => {
           return (

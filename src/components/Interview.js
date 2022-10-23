@@ -13,6 +13,7 @@ const Interview = () => {
 
   return (
     <motion.section
+      id="interview"
       variants={fadeIn("up")}
       initial="hidden"
       whileInView={"show"}

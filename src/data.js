@@ -34,11 +34,11 @@ export const headerData = {
 export const navData = {
   items: [
     { href: "/", name: "Home" },
-    { href: "/", name: "Nosotros" },
-    { href: "/", name: "Productos" },
-    { href: "/", name: "Entrevista" },
-    { href: "/", name: "Comunidad" },
-    { href: "/", name: "Contacto" },
+    { href: "#about", name: "Nosotros" },
+    { href: "#gallery", name: "Productos" },
+    { href: "#interview", name: "Entrevista" },
+    { href: "#skills", name: "Comunidad" },
+    { href: "#contact", name: "Contacto" },
   ],
 };
 
@@ -233,10 +233,10 @@ export const footerData = {
   links: {
     title: "Links útiles",
     items: [
-      { href: "/", name: "Nosotros" },
-      { href: "/", name: "Los productos" },
-      { href: "/", name: "Servicios" },
-      { href: "/", name: "Contacto" },
+      { href: "#about", name: "Nosotros" },
+      { href: "#gallery", name: "Los productos" },
+      { href: "#skills", name: "Servicios" },
+      { href: "#contact", name: "Contacto" },
     ],
   },
   program: {
@@ -249,12 +249,19 @@ export const footerData = {
     ],
   },
   newsletter: {
-    title: "Newsletter",
+    title: "Noticias",
     subtitle:
-      "Elit duis porttitor massa tellus nun in velit arcu posuere integer.",
+      "Dejanos tu mail si queres recibir noticias, ofertas y actividades en la comunidad",
     form: {
-      placeholder: "Your email address",
+      placeholder: "tu dirección de email",
       icon: <FiSend />,
     },
+  },
+  login: {
+    title: "Área Personal",
+    items: [
+      { href: "/", name: "Login" },
+      { href: "/", name: "Registro" },
+    ],
   },
 };
