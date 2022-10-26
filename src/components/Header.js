@@ -51,7 +51,7 @@ const Header = () => {
           } fixed bg-white w-full h-full
         left-0 -z-10 transition-all duration-300`}
         >
-          <NavMobile />
+          <NavMobile showMenu={setNavMobile} />
         </div>
         <div className="hidden xl:flex">
           <Socials />

@@ -5,7 +5,8 @@ import { fadeIn } from "../variants";
 
 import Socials from "./Socials";
 
-const NavMobile = () => {
+const NavMobile = (props) => {
+  console.log(props)
   const { items, btnIcon } = navData;
   return (
     <nav
@@ -14,13 +15,13 @@ const NavMobile = () => {
       justify-evenly overflow-hidden"
     >
       <ul
-        className="flex flex-col justify-center 
+        className="flex flex-col justify-center
       items-center gap-y-6 py-6 mb-8"
       >
         {items.map((item, index) => {
           return (
             <li key={index}>
-              <a className="text-2xl font-primary uppercase" href={item.href}>
+              <a className="text-2xl font-primary uppercase" href={item.href} onClick={() => props.showMenu(false)}>
                 {item.name}
               </a>
             </li>
