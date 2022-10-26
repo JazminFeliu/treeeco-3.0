@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  node:
+    build: .
+    image: 'custom-node'
+    container_name: 'treeeco'
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - '8080:80'
+      - '9229:9229'
+
+    command: bash -c "yarn install && tail -f /dev/null" #yarn dev
