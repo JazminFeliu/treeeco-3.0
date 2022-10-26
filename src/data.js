@@ -12,6 +12,7 @@ import QuoteImg from "../src/img/testimonial/quote.svg";
 // import icons
 import { GrFacebookOption } from "react-icons/gr";
 import { IoMdArrowForward } from "react-icons/io";
+import PriceIcn from "../src/img/pricing/icons/price.svg";
 import { FiSend } from "react-icons/fi";
 import {
   FaPlay,
@@ -26,6 +27,7 @@ import {
   IoLogoTwitter,
   IoLogoYoutube,
 } from "react-icons/io";
+import QuestionMarkIcn from "../src/img/faq/icons/question-mark.svg";
 
 export const headerData = {
   logo: Logo,
@@ -36,7 +38,7 @@ export const navData = {
     { href: "/", name: "Home" },
     { href: "#about", name: "Nosotros" },
     { href: "#gallery", name: "Productos" },
-    { href: "#interview", name: "Entrevista" },
+    { href: "#faq", name: "Servicios" },
     { href: "#skills", name: "Comunidad" },
     { href: "#contact", name: "Contacto" },
   ],
@@ -137,6 +139,43 @@ export const galleryData = {
   ],
 };
 
+export const faq = {
+  icon: QuestionMarkIcn,
+  title: "Conoces nuestros servicios?",
+  accordions: [
+    {
+      question: "Servicios Ambientales tradicionales",
+      answer:
+        "Evaluaciones y Estudios de Impacto Ambiental, Diagnósticos Socio-Ambientales, actividades de sanitización, abonado, plantaciones, podas y limpiezas son algunos de los servicios que ofrecemos.",
+    },
+    {
+      question: "S.I.A.R.",
+      answer:
+        "La Innovación Recombinante plantea un Sistema donde se analiza una actividad – por ej., la de un tambo- una o dos oportunidades, como generar un bio-fertilizante y tratar las excretas bovinas - y se buscan soluciones ambientales que puedan integrarse de manera escalonada y escalable a esta actividad, -la instalación de un biodigestor - sumando así un servicio de mejora continua.",
+    },
+    {
+      question: "Núcleos comunales productivos",
+      answer:
+        "En la forma de Consorcios de productos y servicios regionales, generamos redes de logistica y puntos de abastecimiento intercomunitario de hortalizas, abonos, y muchos productos mas.",
+    },
+    {
+      question: "Economía circular",
+      answer:
+        "Buscamos ofrecer herramientas que permitan la transición de una economía de desarrollo lineal a una Economia Circular y con CosmoConvivencia.",
+    },
+    {
+      question: "Corredor Ecocultural",
+      answer:
+        "Jornadas de Ecocine y debate son parte de las Acciones sociales para una sociedad sustentable que promovemos y armamos.",
+    },
+    {
+      question: "Ventas comunitarias",
+      answer:
+        "Armamos combos de productos propios y otros productos para favorecer la venta comunitaria de categorias asociativas. Por ejemplo, si tenés una huerta y hacés dulces, el combo dulce + abono orgánico (seguir)",
+    },
+  ],
+};
+
 export const interviewData = {
   title:
     "“Los productos, servicios y acciones sociales buscan crear un impacto ambiental positivo que perdure en el tiempo.”",
@@ -213,6 +252,46 @@ export const contactData = {
   },
 };
 
+export const pricing = {
+  icon: PriceIcn,
+  title: "Pricing plan",
+  plans: [
+    {
+      name: "Basic",
+      price: "20",
+      list: [
+        { name: "unlimited gym access" },
+        { name: "1 training programs" },
+        { name: "free fitness consultation" },
+      ],
+      delay: 600,
+    },
+    {
+      name: "Premium",
+      price: "35",
+      list: [
+        { name: "unlimited gym access" },
+        { name: "5 training programs" },
+        { name: "free fitness consultation" },
+        { name: "personal trainer" },
+      ],
+      delay: 800,
+    },
+    {
+      name: "Elite",
+      price: "49",
+      list: [
+        { name: "unlimited gym access" },
+        { name: "all training programs" },
+        { name: "free fitness consultation" },
+        { name: "personal trainer" },
+        { name: "50% off drinks" },
+      ],
+      delay: 1000,
+    },
+  ],
+};
+
 export const footerData = {
   about: {
     title: "About TREEECO -  Tandil, ARGENTINA",
@@ -261,8 +340,8 @@ export const footerData = {
   login: {
     title: "Área Personal",
     items: [
-      { href: "/", name: "Login" },
-      { href: "/", name: "Registro" },
+      { href: "/", name: "Log In" },
+      { href: "/", name: "Sign Up" },
     ],
     btnIcon: <FaPlay />,
   },

@@ -11,6 +11,7 @@ const Header = () => {
   const { logo } = headerData;
   const [isActive, setIsActive] = useState(false);
   const [navMobile, setNavMobile] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 50 ? setIsActive(true) : setIsActive(false);
@@ -38,12 +39,12 @@ const Header = () => {
         </div>
         <div
           onClick={() => setNavMobile(!navMobile)}
-          className="xl:hidden absolute right-[5%] bg-dark text-white p-2 rounded-md cursor-pointer"
+          className="xl:hidden absolute right-[5%] bg-dark p-2 rounded-md cursor-pointer"
         >
-          <TiThMenuOutline className="text-3xl" />
+          <TiThMenuOutline className="text-3xl text-white" />
         </div>
         <div
-          className={`${navMobile ? "max-h-full" : "max-h-0"} ${
+          className={`${navMobile ? "max-h-full" : "max-h-0 overflow-hidden"} ${
             isActive
               ? "top-[100px] lg:top-[110px]"
               : "top-[120px] lg:top-[150px]"

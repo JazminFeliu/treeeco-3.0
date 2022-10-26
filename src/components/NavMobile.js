@@ -11,7 +11,7 @@ const NavMobile = () => {
     <nav
       id="navMobile"
       className="w-full h-full flex flex-col
-      justify-evenly overflow-hidden "
+      justify-evenly overflow-hidden"
     >
       <ul
         className="flex flex-col justify-center 
@@ -31,11 +31,8 @@ const NavMobile = () => {
         variants={fadeIn("down")}
         className="-mt-44 flex justify-center gap-x-8"
       >
-        <button className="btn btn-sm lg:btn-lg btn-outline mx-auto lg:mx-0">
-          Log In <div className="text-xl">{btnIcon}</div>
-        </button>
         <button className=" btn btn-sm btn-dark">
-          Sign Up <div className="text-xl">{btnIcon}</div>
+          Login <div className="text-xl">{btnIcon}</div>
         </button>
       </motion.div>
       <div className="text-2xl">
