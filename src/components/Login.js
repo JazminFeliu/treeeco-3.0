@@ -1,5 +1,5 @@
 import React from "react";
-import { heroData } from "../data";
+import { loginData } from "../data";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
@@ -13,12 +13,12 @@ const container = {
   },
 };
 
-const Hero = () => {
-  const { title, subtitle, btnText, btnIcon } = heroData;
+const Login = () => {
+  const { title, subtitle, btnText, btnIcon } = loginData;
 
   return (
     <section
-      id="hero"
+      id="login"
       className="bg-hero bg-cover bg-center min-h-[40vh] lg:h-[948px]
   bg-no-repeat relative mt-[120px]
   lg:mt-[150px]"
@@ -41,7 +41,7 @@ const Hero = () => {
             {subtitle}
           </motion.p>
           <motion.div variants={fadeIn("down")}>
-            <a href="#skills">
+            <a href="#about">
             <button className="btn btn-sm lg:btn-lg btn-outline mx-auto lg:mx-0">
               {btnText} <div className="text-xl">{btnIcon}</div>
             </button></a>
@@ -56,4 +56,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Login;

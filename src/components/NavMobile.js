@@ -9,7 +9,7 @@ const NavMobile = (props) => {
   console.log(props)
   const { items, btnIcon } = navData;
   return (
-    <nav
+    <nav 
       id="navMobile"
       className="w-full h-full flex flex-col
       justify-evenly overflow-hidden"
@@ -32,9 +32,11 @@ const NavMobile = (props) => {
         variants={fadeIn("down")}
         className="-mt-44 flex justify-center gap-x-8"
       >
+        <a href="#contact" onClick={() => props.showMenu(false)}>
         <button className=" btn btn-sm btn-dark">
           Login <div className="text-xl">{btnIcon}</div>
         </button>
+        </a>
       </motion.div>
       <div className="text-2xl">
         <Socials />

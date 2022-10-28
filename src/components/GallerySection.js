@@ -59,9 +59,10 @@ const GallerySection = () => {
         viewport={{ once: false, amount: 0.2 }}
         className="flex justify-center"
       >
-        <button className="btn btn-lg btn-dark">
+        <a href="#pricing">
+        <button className="btn btn-lg btn-dark" >
           {btnText} <div className="text-xl">{btnIcon}</div>
-        </button>
+        </button></a>
       </motion.div>
     </section>
   );

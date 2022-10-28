@@ -73,6 +73,13 @@ export const heroData = {
   btnIcon: <IoMdArrowForward />,
 };
 
+export const loginData = {
+  title: "TREEECO",
+  subtitle: "Proximamente seccion registro/login para integrantes de treeeco",
+  btnText: "leer mas",
+  btnIcon: <IoMdArrowForward />,
+};
+
 export const aboutData = {
   title: "Nuestra Historia:",
   subtitle1:
@@ -85,7 +92,7 @@ export const aboutData = {
 
 export const galleryData = {
   title: "Los Productos:",
-  btnText: "Ver todos",
+  btnText: "Ver Ofertas",
   btnIcon: <IoMdArrowForward />,
   images: [
     {
@@ -246,7 +253,7 @@ export const contactData = {
   ],
   form: {
     name: "Nombre",
-    email: "e-mail (ó @insta, #face, discord, etc.)",
+    email: "e-mail",
     message: "Escriba su mensaje",
     btnText: "Enviar",
   },
@@ -254,40 +261,41 @@ export const contactData = {
 
 export const pricing = {
   icon: PriceIcn,
-  title: "Pricing plan",
+  title: "Ofertas",
   plans: [
     {
-      name: "Basic",
-      price: "20",
+      name: "GUACAMASHI",
+      price: "349",
       list: [
-        { name: "unlimited gym access" },
-        { name: "1 training programs" },
-        { name: "free fitness consultation" },
+        { name: "A. Orgánico tipo bokashi, minerales y excreta pura gallina y cerdo" },
+        { name: "Bolsa x 3 kg" },
+        { name: "Con NPK analizado por INTA Balcarce " },
+        { name: "Libre de patógenos " },
       ],
-      delay: 600,
+      delay: 0.6,
     },
     {
-      name: "Premium",
-      price: "35",
+      name: "GUMBA",
+      price: "80",
       list: [
-        { name: "unlimited gym access" },
-        { name: "5 training programs" },
-        { name: "free fitness consultation" },
-        { name: "personal trainer" },
+        { name: "A. orgánico vivo ácido a base de cerdo, gallina y caballo" },
+        { name: "Cantidad de pedido mínimo 50 kg" },
+        { name: "Consultar stock y cargo de flete" },
+        { name: "Precio mayorista x kg" },
       ],
-      delay: 800,
+      delay: 0.8,
     },
     {
-      name: "Elite",
-      price: "49",
+      name: "ASGARD",
+      price: "1996",
       list: [
-        { name: "unlimited gym access" },
-        { name: "all training programs" },
-        { name: "free fitness consultation" },
-        { name: "personal trainer" },
-        { name: "50% off drinks" },
+        { name: "A. orgánico vivo alcalio a base de vaca, caballo," },
+        { name: "gallina y humus de lombriz" },
+        { name: "Bolsa x 15 kg" },
+        { name: "consultar cantidad sin costo de envio" },
+        
       ],
-      delay: 1000,
+      delay: 1,
     },
   ],
 };
@@ -315,7 +323,7 @@ export const footerData = {
     items: [
       { href: "#about", name: "Nosotros" },
       { href: "#gallery", name: "Los productos" },
-      { href: "#skills", name: "Servicios" },
+      { href: "#faq", name: "Servicios" },
       { href: "#contact", name: "Contacto" },
     ],
   },

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useForm, ValidationError } from '@formspree/react';
 import { footerData } from "../data";
 
 import { motion } from "framer-motion";
@@ -17,6 +17,10 @@ const staggerContainer = {
 };
 
 const Footer = () => {
+  const [state, handleSubmit] = useForm("xjvjyzdy");
+  if (state.succeeded) {
+      return <p className="bg-pink-200">Gracias por escribirnos para recibir las novedades!</p>;
+  }
   const { about, links, program, newsletter, login } = footerData;
   return (
     <footer id="footer" className="section bg-dark">
@@ -94,13 +98,21 @@ const Footer = () => {
             <div className="leading-relaxed mb-9 text-[#dbdbdb]">
               {newsletter.subtitle}
             </div>
-            <form className="flex justify-between items-start border-b border-[#b6b6b6]">
+            <form  onSubmit={handleSubmit} className="flex justify-between items-start border-b border-[#b6b6b6]">
               <input
                 className="outline-none placeholder:text-base italic placeholder:capitalize bg-transparent pb-2 "
                 placeholder={newsletter.form.placeholder}
-                type="text"
+                                id="email"
+                type="email" 
+                name="email"
               />
-              <button className="text-2xl cursor-pointer" type="submmit">
+              
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+              <button className="text-2xl cursor-pointer" type="submmit" disabled={state.submitting}>
                 {newsletter.form.icon}
               </button>
             </form>

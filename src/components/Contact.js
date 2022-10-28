@@ -1,5 +1,5 @@
 import React from "react";
-
+import  { useForm, ValidationError} from "@formspree/react";
 import { contactData } from "../data";
 
 import { motion } from "framer-motion";
@@ -7,7 +7,13 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
 const Contact = () => {
+
   const { title, info, form } = contactData;
+  const [state, handleSubmit] = useForm("xjvjyzdy"); 
+  if(state.succeeded){
+    return<p className="bg-pink-200">Gracias por escribirnos! a la brevedad le contestaremos!</p>;    
+  }
+
   return (
     <section id="contact" className="section">
       <div className="container mx-auto">
@@ -66,23 +72,39 @@ const Contact = () => {
             viewport={{ once: false, amount: 0.4 }}
             className="flex-1 xl:pl-[40px] flex justify-center items-center"
           >
-            <form className="flex flex-col gap-y-10 w-full">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-y-10 w-full">
               <input
+              
                 className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
                 placeholder={form.name}
                 type="text"
               />
               <input
                 className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
-                placeholder={form.email}
-                type="text"
+                placeholder={form.email}               
+                id="email"
+                type="email" 
+                name="email"              
               />
-              <input
-                className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
+               <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+      <textarea
+
+        id="message"
+        name="message"
+        className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
                 placeholder={form.message}
-                type="text"
-              />
-              <button className="btn btn-sm btn-dark self-start">
+      />
+      <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
+
+              <button type="submit" disabled={state.submitting} className="btn btn-sm btn-dark self-start">
                 {form.btnText}
               </button>
             </form>

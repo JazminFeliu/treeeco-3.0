@@ -12,6 +12,7 @@ import Testimonial from "./components/Testimonial";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Copyright from "./components/Copyright";
+import Pricing from "./components/Pricing";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Faq />
       <Skills />
       <Testimonial />
+      <Pricing />
       <Interview />
       <Contact />
       <Footer />
