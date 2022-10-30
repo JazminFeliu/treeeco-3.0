@@ -178,7 +178,7 @@ export const faq = {
     {
       question: "Ventas comunitarias",
       answer:
-        "Armamos combos de productos propios y otros productos para favorecer la venta comunitaria de categorias asociativas. Por ejemplo, si tenés una huerta y hacés dulces, el combo dulce + abono orgánico (seguir)",
+        "Armamos combos de productos propios y otros productos para favorecer la venta comunitaria de categorias asociativas. Por ejemplo, si tenés una huerta y hacés dulces, el combo dulce + abono orgánico se ofrece en ferias y por el apartado de ofertas en instagram",
     },
   ],
 };
@@ -265,7 +265,7 @@ export const pricing = {
   plans: [
     {
       name: "GUACAMASHI",
-      price: "349",
+      price: "489",
       list: [
         { name: "A. Orgánico tipo bokashi, minerales y excreta pura gallina y cerdo" },
         { name: "Bolsa x 3 kg" },
