@@ -1,7 +1,6 @@
 import React from "react";
 import  { useForm, ValidationError} from "@formspree/react";
 import { contactData } from "../data";
-
 import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
@@ -56,7 +55,7 @@ const Contact = () => {
                     </div>
                     <a
                       className="font-medium border-b border-dark pb-[5px]"
-                      href="https://www.google.com/maps/@-37.319468,-59.1314585,15z"
+                      href="https://www.google.com/maps/place/37%C2%B017'06.0%22S+59%C2%B006'39.5%22W/@-37.284985,-59.110967,17z/data=!3m1!4b1!4m6!3m5!1s0!7e2!8m2!3d-37.2849853!4d-59.1109672"
                     >
                       {link}
                     </a>

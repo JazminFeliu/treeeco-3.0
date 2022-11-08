@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Copyright from "./components/Copyright";
 import Pricing from "./components/Pricing";
+import Blog from "./components/Blog"
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <About />
       <GallerySection />
       <Faq />
+      {/* <Blog /> */}
       <Skills />
       <Testimonial />
       <Pricing />

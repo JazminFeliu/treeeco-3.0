@@ -87,7 +87,7 @@ export const aboutData = {
   subtitle2:
     "Nuestros productos, están siendo monitoreados por INTA subestación Balcarce, apuntando a la mejora continua y en pos de obtener un producto, naturalmente apto para los agricultores, horticultores de baja, media y alta intensidad productiva.",
   btnText: "Conocer mas",
-  btnIcon: <IoMdArrowForward />,
+  btnIcon: <IoMdArrowForward />, 
 };
 
 export const galleryData = {
@@ -220,7 +220,7 @@ export const contactData = {
       subtitle: "Fábrica de procesos y preparado de productos ambientales",
       address: {
         icon: <FaMapMarkerAlt />,
-        name: "Pje. Sansouci 2500, Tandil",
+        name: "Aeronáutica Argentina y Cerrillada, Tandil",
       },
       phone: {
         icon: <FaPhoneAlt />,
@@ -289,7 +289,7 @@ export const pricing = {
       name: "ASGARD",
       price: "1996",
       list: [
-        { name: "A. orgánico vivo alcalio a base de vaca, caballo," },
+        { name: "A. orgánico vivo alcalino a base de vaca, caballo," },
         { name: "gallina y humus de lombriz" },
         { name: "Bolsa x 15 kg" },
         { name: "consultar cantidad sin costo de envio" },
@@ -307,7 +307,7 @@ export const footerData = {
       "Empresa ambiental con impacto social. Asesoramiento y producción de abono orgánico",
     address: {
       icon: <FaMapMarkerAlt />,
-      name: "Pje. Sansouci 2500, Tandil",
+      name: "Aeronáutica Argentina y Cerrillada, Tandil",
     },
     phone: {
       icon: <FaPhoneAlt />,
@@ -325,6 +325,7 @@ export const footerData = {
       { href: "#gallery", name: "Los productos" },
       { href: "#faq", name: "Servicios" },
       { href: "#contact", name: "Contacto" },
+      { href: "#skills", name: "Comunidad" },
     ],
   },
   program: {
