@@ -242,7 +242,7 @@ export const contactData = {
       },
       phone: {
         icon: <FaPhoneAlt />,
-        number: "+54 249 420 8028",
+        number: "+54 11 5563 4459",
       },
       email: {
         icon: <FaInstagram />,
@@ -311,7 +311,7 @@ export const footerData = {
     },
     phone: {
       icon: <FaPhoneAlt />,
-      number: "+54 249 425 0711 / +54 249 420 8028 ",
+      number: "+54 249 425 0711 / +54 11 5563 4459 ",
     },
     email: {
       icon: <FaEnvelope />,
