@@ -213,6 +213,7 @@ export const testimonialData = [
 ];
 
 export const contactData = {
+  logo: Logo,
   title: "Contacto",
   info: [
     {
@@ -301,6 +302,7 @@ export const pricing = {
 };
 
 export const footerData = {
+  logo: Logo,
   about: {
     title: "About TREEECO -  Tandil, ARGENTINA",
     subtitle:

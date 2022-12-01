@@ -1,16 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import  { useForm, ValidationError} from "@formspree/react";
 import { contactData } from "../data";
 import { motion } from "framer-motion";
+import Modal from "./Modal";
 
 import { fadeIn } from "../variants";
+import { isVisible } from "@testing-library/user-event/dist/utils";
 
 const Contact = () => {
 
-  const { title, info, form } = contactData;
+  const { title, info, form, logo } = contactData; 
   const [state, handleSubmit] = useForm("xjvjyzdy"); 
-  if(state.succeeded){
-    return<p className="bg-pink-200">Gracias por escribirnos! a la brevedad le contestaremos!</p>;    
+  const [showModal, setShowModal] = useState(false);
+
+  if(state.succeeded && isVisible){
+    return <> <Modal isVisible={showModal} onClose={() => setShowModal(false) } >     
+            
+  <div class="md:flex">
+    <div class="md:shrink-0">
+      <img class="w-[100px] h-[100px] object-cover md:h-90% md:w-90%" src={logo} alt="Treeeco Tandil, Argentina"  />
+    </div>
+    <div class="p-6">
+      <div class="uppercase tracking-wide text-sm text-green-700 font-semibold">Su mensaje ha sido enviado</div>
+      <p  class="block mt-1 text-lg leading-tight font-medium text-black ">Gracias por escribirnos, le contestaremos a la brevedad.</p>
+      <p class="mt-2 text-slate-500">Equipo TREEECO.  </p>
+    </div>
+  </div>     
+    </Modal>
+   <Contact />
+    </>;
+         
   }
 
   return (
@@ -21,7 +40,7 @@ const Contact = () => {
             variants={fadeIn("right")}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: false, amount: 0.7 }}
             className="flex-1"
           >
             <h2 className="h2 max-w-[490px]">{title}</h2>
@@ -68,12 +87,12 @@ const Contact = () => {
             variants={fadeIn("left")}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: false, amount: 0.7 }}
             className="flex-1 xl:pl-[40px] flex justify-center items-center"
           >
             <form onSubmit={handleSubmit} className="flex flex-col gap-y-10 w-full">
               <input
-              
+                    
                 className="border-b border-dark placeholder:text-[#555] italic tracking-[0.06em] outline-none pb-4"
                 placeholder={form.name}
                 type="text"
@@ -103,7 +122,7 @@ const Contact = () => {
         errors={state.errors}
       />
 
-              <button type="submit" disabled={state.submitting} className="btn btn-sm btn-dark self-start">
+              <button type="submit" disabled={state.submitting} className="btn btn-sm btn-dark self-start" onClick={() => setShowModal(true)}>
                 {form.btnText}
               </button>
             </form>

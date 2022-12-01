@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { useForm, ValidationError } from '@formspree/react';
 import { footerData } from "../data";
-
+import Modal from "./Modal";
 import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
@@ -17,11 +17,29 @@ const staggerContainer = {
 };
 
 const Footer = () => {
+
+  const [showModal, setShowModal] = useState(false);
   const [state, handleSubmit] = useForm("xjvjyzdy");
+  const { about, links, program, newsletter, login, logo } = footerData;
   if (state.succeeded) {
-      return <p className="bg-pink-200">Gracias por escribirnos para recibir las novedades!</p>;
+      return <> <Modal isVisible={showModal} onClose={() => setShowModal(false) } >     
+            
+      <div class="md:flex">
+        <div class="md:shrink-0">
+          <img class="w-[100px] h-[100px] object-cover md:h-90% md:w-90%" src={logo} alt="Treeeco Tandil, Argentina"  />
+        </div>
+        <div class="p-6">
+          <div class="uppercase tracking-wide text-sm text-green-700 font-semibold">Solicitud enviada</div>
+          <p  class="block mt-1 text-lg leading-tight font-medium text-black ">Gracias por inscribirse a nuestro Newsletter</p>
+          <p class="mt-2 text-slate-500">Equipo TREEECO.  </p>
+        </div>
+      </div>     
+        </Modal>
+        <Footer />     
+        </>;
+             
   }
-  const { about, links, program, newsletter, login } = footerData;
+ 
   return (
     <footer id="footer" className="section bg-dark">
       <div className="container mx-auto">
@@ -112,7 +130,7 @@ const Footer = () => {
         field="email"
         errors={state.errors}
       />
-              <button className="text-2xl cursor-pointer" type="submmit" disabled={state.submitting}>
+              <button className="text-2xl cursor-pointer" type="submmit" disabled={state.submitting} onClick={() => setShowModal(true)}>
                 {newsletter.form.icon}
               </button>
             </form>
