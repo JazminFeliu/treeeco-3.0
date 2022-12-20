@@ -36,11 +36,11 @@ export const headerData = {
 export const navData = {
   items: [
     { href: "/", name: "Home" },
-    { href: "#about", name: "Nosotros" },
-    { href: "#gallery", name: "Productos" },
-    { href: "#faq", name: "Servicios" },
-    { href: "#skills", name: "Comunidad" },
-    { href: "#contact", name: "Contacto" },
+    { href: "/nosotros", name: "Nosotros" },
+    { href: "/productos", name: "Productos" },
+    { href: "/servicios", name: "Servicios" },
+    { href: "/comunidad", name: "Comunidad" },
+    { href: "/contacto", name: "Contacto" },
   ],
   btnIcon: <IoMdArrowForward />,
 };
@@ -268,7 +268,7 @@ export const pricing = {
       name: "GUACAMASHI",
       price: "489",
       list: [
-        { name: "A. Orgánico tipo bokashi, minerales y excreta pura gallina y cerdo" },
+        { name: "A. Orgánico tipo bokashi, mineral y excreta pura gallina y cerdo" },
         { name: "Bolsa x 3 kg" },
         { name: "Con NPK analizado por INTA Balcarce " },
         { name: "Libre de patógenos " },
@@ -301,6 +301,8 @@ export const pricing = {
   ],
 };
 
+
+
 export const footerData = {
   logo: Logo,
   about: {
@@ -323,11 +325,12 @@ export const footerData = {
   links: {
     title: "Links útiles",
     items: [
-      { href: "#about", name: "Nosotros" },
-      { href: "#gallery", name: "Los productos" },
-      { href: "#faq", name: "Servicios" },
-      { href: "#contact", name: "Contacto" },
-      { href: "#skills", name: "Comunidad" },
+      { href: "/", name: "Home" },
+      { href: "/nosotros", name: "Nosotros" },
+      { href: "/productos", name: "Los productos" },
+      { href: "/servicios", name: "Servicios" },
+      { href: "/contacto", name: "Contacto" },
+      { href: "/comunidad", name: "Comunidad" },
     ],
   },
   program: {
@@ -351,8 +354,8 @@ export const footerData = {
   login: {
     title: "Área Personal",
     items: [
-      { href: "/", name: "Log In" },
-      { href: "/", name: "Sign Up" },
+      { href: "/login", name: "Log In" },
+      { href: "/register", name: "Sign Up" },
     ],
     btnIcon: <FaPlay />,
   },

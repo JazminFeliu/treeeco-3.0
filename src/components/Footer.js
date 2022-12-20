@@ -3,7 +3,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { footerData } from "../data";
 import Modal from "./Modal";
 import { motion } from "framer-motion";
-
+import { NavLink } from "react-router-dom";
 import { fadeIn } from "../variants";
 
 const staggerContainer = {
@@ -90,9 +90,9 @@ const Footer = () => {
                   const { href, name } = item;
                   return (
                     <li key={index}>
-                      <a href={href} className="hover:text-white transition">
+                      <NavLink to={href} className="hover:text-white transition">
                         {name}
-                      </a>
+                      </NavLink>
                     </li>
                   );
                 })}
@@ -149,9 +149,9 @@ const Footer = () => {
                   const { href, name } = item;
                   return (
                     <li key={index}>
-                      <a href={href} className="hover:text-white transition">
+                      <NavLink to={href} className="hover:text-white transition">
                         {name}
-                      </a>
+                      </NavLink>
                     </li>
                   );
                 })}

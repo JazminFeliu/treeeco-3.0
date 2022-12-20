@@ -2,8 +2,9 @@ import React from "react";
 import { navData } from "../data";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-
 import Socials from "./Socials";
+import { NavLink } from "react-router-dom";
+
 
 const NavMobile = (props) => {
   console.log(props)
@@ -21,9 +22,9 @@ const NavMobile = (props) => {
         {items.map((item, index) => {
           return (
             <li key={index}>
-              <a className="text-2xl font-primary uppercase" href={item.href} onClick={() => props.showMenu(false)}>
+              <NavLink className="text-2xl font-primary uppercase" to={item.href} onClick={() => props.showMenu(false)}>
                 {item.name}
-              </a>
+              </NavLink>
             </li>
           );
         })}
@@ -32,11 +33,11 @@ const NavMobile = (props) => {
         variants={fadeIn("down")}
         className="-mt-44 flex justify-center gap-x-8"
       >
-        <a href="#contact" onClick={() => props.showMenu(false)}>
+        <NavLink to="/login" onClick={() => props.showMenu(false)}>
         <button className=" btn btn-sm btn-dark">
           Login <div className="text-xl">{btnIcon}</div>
         </button>
-        </a>
+        </NavLink>
       </motion.div>
       <div className="text-2xl">
         <Socials />

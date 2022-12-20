@@ -1,37 +1,30 @@
 import React from "react";
-
-// import components
-import Hero from "./components/Hero";
-import Header from "./components/Header";
-import About from "./components/About";
-import GallerySection from "./components/GallerySection";
-import Faq from "./components/Faq";
-import Skills from "./components/Skills";
-import Interview from "./components/Interview";
-import Testimonial from "./components/Testimonial";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Copyright from "./components/Copyright";
-import Pricing from "./components/Pricing";
-
+import {BrowserRouter, Route, Routes } from "react-router-dom";
+import ComunidadPage from "./pages/ComunidadPage";
+import HomePage from "./pages/HomePage";
+import NosotrosPage from "./pages/NosotrosPage";
+import ProductosPage from "./pages/ProductosPage";
+import ServiciosPage from "./pages/ServiciosPage";
+import ContactoPage from "./pages/ContactoPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const App = () => {
   return (
-    <div className="max-w-[1920px] mx-auto overflow-hidden bg-white">
-      <Header />
-      <Hero />
-      <About />
-      <GallerySection />
-      <Faq />
-      <Skills />
-      <Testimonial />
-      <Pricing />
-      <Interview />
-      <Contact />
-      <Footer />
-      <Copyright />
-      {/* <div className="h-[4000px]"></div> */}
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/nosotros" element={<NosotrosPage />} />
+      <Route path="/productos" element={<ProductosPage />} />
+      <Route path="/servicios" element={<ServiciosPage />} />
+      <Route path="/comunidad" element={<ComunidadPage />} />
+      <Route path="/contacto" element={<ContactoPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
+    </BrowserRouter>
   );
 };
 
