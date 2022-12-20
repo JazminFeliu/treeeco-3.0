@@ -1,5 +1,5 @@
 import React from "react";
-import siar from "../img/about/SIAR.jpg"
+import siar from "../img/comunidad/SIAR1.jpg"
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import mundial from "../img/comunidad/mundialDePromos.png";
