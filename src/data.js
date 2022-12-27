@@ -229,7 +229,7 @@ export const contactData = {
       },
       email: {
         icon: <FaEnvelope />,
-        address: "treeecoargentina@gmail.com",
+        address: "info@treeeco.com.ar",
       },
       link: "Get location",
     },
@@ -319,7 +319,7 @@ export const footerData = {
     },
     email: {
       icon: <FaEnvelope />,
-      address: "treeecoargentina@gmail.com",
+      address: "info@treeeco.com.ar",
     },
   },
   links: {

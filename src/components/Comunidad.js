@@ -17,7 +17,8 @@ const Comunidad = () => {
         viewport={{ once: false, amount: 0.6 }}
         className="h2 max-w-[370px] lg:mb-20"
       >
-       Comunidad #TreeecoPower🌱🌱🌱      </motion.h2>
+       Comunidad #TreeecoPower🌱🌱🌱      
+      </motion.h2>
       </div>
 
      
